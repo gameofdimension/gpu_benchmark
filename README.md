@@ -1,5 +1,5 @@
 # 在原 repo 基础上支持了 Ascend NPU 的相关测试
-在完成 **Install** 环节之后执行 `bash npu_bench_run.sh` 即可发起测试，以下为一个样例输出
+完成 **Install** 环节之后执行 `bash npu_bench_run.sh` 即可发起测试，以下为一个样例输出
 
 ```
 Benchmark started on 2024-11-01 02:59:07
