@@ -1,3 +1,39 @@
+# 在原 repo 基础上支持了 Ascend NPU 的相关测试
+在完成 **Install** 环节之后执行 `bash npu_bench_run.sh` 即可发起测试，以下为一个样例输出
+
+```
+Benchmark started on 2024-11-01 02:59:07
+
+** Command line:
+/home/gpu_benchmark/.venv/bin/python mamf-finder.py
+
+** Dtype: torch.bfloat16
+
+** Platform/Device info:
+Linux ** #1 SMP Mon Dec 4 17:16:09 CST 2023 x86_64 x86_64
+_NPUDeviceProperties(name='Ascend910B2C', total_memory=62432MB)
+
+** Critical software versions:
+torch=2.4.0+cpu
+cuda=None
+
+** Additional notes:
+
+
+--------------------------------------------------------------------------------
+
+
+[I 2024-11-01 02:59:08,294] Using an existing study with name 'mamf_study' instead of creating a new one.
+[I 2024-11-01 02:59:09,018] Trial 1000 finished with value: {'TFLOPS': 291.57958890075423} and parameters: {'M': 6912, 'N': 16384, 'K': 2048}. Best is trial 504 with value: 322.5190778556288.
+[I 2024-11-01 02:59:09,110] Trial 1001 finished with value: {'TFLOPS': 272.59506622689537} and parameters: {'M': 2304, 'N': 5120, 'K': 1536}. Best is trial 504 with value: 322.5190778556288.
+[I 2024-11-01 02:59:09,478] Trial 1002 finished with value: {'TFLOPS': 301.25532296864117} and parameters: {'M': 6144, 'N': 17920, 'K': 2816}. Best is trial 504 with value: 322.5190778556288.
+[I 2024-11-01 02:59:09,760] Trial 1003 finished with value: {'TFLOPS': 317.3188600595759} and parameters: {'M': 14336, 'N': 4096, 'K': 4096}. Best is trial 504 with value: 322.5190778556288.
+...
+```
+
+# 以下为原 README 内容
+
+
 # Theoretical TFLOPS ≠ Real-world Performance
 # Testing Theoretical Maximum FLOPS on GPUs
 
